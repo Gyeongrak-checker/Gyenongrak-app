@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-// TODO: 레이아웃 구상
- //TODO: 라이브러리 모색
-
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +14,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Container(),
+      home: Material(
+        child: Scaffold(
+          appBar: AppBar(title: Text("경락 앱 프로토타입"),),
+          body: Center(
+            child: Text('Hello World!!'),
+          ),
+        ),
+      ),
     );
   }
 }
