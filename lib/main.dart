@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gyenongrak_app/screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,16 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      home: Material(
-        child: Scaffold(
-          appBar: AppBar(title: Text("경락 앱 프로토타입"),),
-          body: Center(
-            child: Text('Hello World!!'),
-          ),
-        ),
-      ),
+      home: Material(child: MainScreen()),
     );
   }
 }
