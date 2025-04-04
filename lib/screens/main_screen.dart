@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/widgets/filter/bottom_filter.dart';
+import 'package:gyenongrak_app/widgets/filter/bottom_filter_list.dart';
 import 'package:gyenongrak_app/widgets/gyuenongrak/gyuenongrak_list_view.dart';
 
 class MainScreen extends StatelessWidget {
@@ -9,7 +9,13 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(children: [GyuenongrakListView(), BottomFilter()]),
+        body: GyuenongrakListView(),
+        bottomNavigationBar: BottomFilter(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.green,
+          child: Icon(Icons.access_alarms_sharp, color: Colors.white),
+        ),
       ),
     );
   }

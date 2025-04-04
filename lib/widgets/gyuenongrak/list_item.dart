@@ -6,9 +6,13 @@ class FilterListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      height: 36,
-      margin: EdgeInsets.only(left: 16.0, right: 16.0),
+      height: 64,
+      margin: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        border: Border.all(width: 2, color: Colors.green),
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+      ),
+      child: Row(mainAxisAlignment: MainAxisAlignment.start, children: []),
     );
   }
 }
