@@ -14,19 +14,19 @@ class _FilterButtonState extends State<FilterButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
-        // border: Border.all(color: Colors.green, width: 2),
+        border: Border.all(color: Colors.green, width: 2),
         color: widget.selected ? Colors.green : null,
         borderRadius: BorderRadius.all(Radius.circular(25)),
       ),
-      child: OutlinedButton(
+      child: MaterialButton(
         onPressed: () {},
         child: Text(
-          "${widget.name}",
+          widget.name,
           style: TextStyle(
             color: widget.selected ? Colors.white : Colors.black,
-            fontSize: 18,
+            fontSize: 20,
           ),
         ),
       ),
