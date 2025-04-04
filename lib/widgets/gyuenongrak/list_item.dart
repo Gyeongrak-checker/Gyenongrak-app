@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class FilterListItem extends StatelessWidget {
   const FilterListItem({super.key});
 
+  // 경매시간, 품목, 산지, 거래량, 규격, 경락가
+  // 전날 대비 상향 하향
+
   @override
   Widget build(BuildContext context) {
     return Container(
