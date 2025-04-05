@@ -7,16 +7,9 @@ class AddFilterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
-        ],
+        title: Text('필터 생성', style: TextStyle(fontWeight: FontWeight.w600)),
       ),
-      body: Center(child: Text('hello')),
+      body: Row(children: []),
     );
   }
 }
