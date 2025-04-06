@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/widgets/filter/filter_add_form.dart';
+import 'package:gyenongrak_app/widgets/filter/filter_add_drop_down.dart';
 
 class AddFilterScreen extends StatelessWidget {
   const AddFilterScreen({super.key});
@@ -14,7 +14,12 @@ class AddFilterScreen extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            children: [_MarketArea(), _ProductArea(), _FilterSaveButton()],
+            children: [
+              _MarketArea(),
+              SizedBox(height: 48),
+              _ProductArea(),
+              _FilterSaveButton(),
+            ],
           ),
         ),
       ),
@@ -29,7 +34,12 @@ class _MarketArea extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 5,
-      child: Column(children: [FilterAddForm(title: "도매 시장")]),
+      child: Column(
+        children: [
+          FilterAddDropDown(title: "도매 시장", enabled: true),
+          FilterAddDropDown(title: "법인 코드", enabled: true),
+        ],
+      ),
     );
   }
 }
@@ -39,7 +49,16 @@ class _ProductArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(flex: 10, child: Container());
+    return Expanded(
+      flex: 10,
+      child: Column(
+        children: [
+          FilterAddDropDown(title: "품목", enabled: true),
+          FilterAddDropDown(title: "품종", enabled: true),
+          FilterAddDropDown(title: "품명", enabled: true),
+        ],
+      ),
+    );
   }
 }
 
@@ -55,7 +74,9 @@ class _FilterSaveButton extends StatelessWidget {
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 1.5,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
             child: const Text(
               '생성',
