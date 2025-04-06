@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/widgets/filter/filter_form.dart';
+import 'package:gyenongrak_app/widgets/filter/filter_add_form.dart';
 
 class AddFilterScreen extends StatelessWidget {
   const AddFilterScreen({super.key});
@@ -23,16 +23,19 @@ class AddFilterScreen extends StatelessWidget {
 }
 
 class _MarketArea extends StatelessWidget {
-  const _MarketArea({super.key});
+  const _MarketArea();
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(flex: 5, child: Container(child: Container()));
+    return Expanded(
+      flex: 5,
+      child: Column(children: [FilterAddForm(title: "도매 시장")]),
+    );
   }
 }
 
 class _ProductArea extends StatelessWidget {
-  const _ProductArea({super.key});
+  const _ProductArea();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +44,7 @@ class _ProductArea extends StatelessWidget {
 }
 
 class _FilterSaveButton extends StatelessWidget {
-  const _FilterSaveButton({super.key});
+  const _FilterSaveButton();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +54,14 @@ class _FilterSaveButton extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 1.5,
-          child: ElevatedButton(onPressed: () {}, child: const Text('생성')),
+          child: ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+            child: const Text(
+              '생성',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+          ),
         ),
       ),
     );
