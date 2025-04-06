@@ -16,7 +16,7 @@ class AddFilterScreen extends StatelessWidget {
           child: Column(
             children: [
               _MarketArea(),
-              SizedBox(height: 48),
+              SizedBox(height: 40),
               _ProductArea(),
               _FilterSaveButton(),
             ],
@@ -53,9 +53,9 @@ class _ProductArea extends StatelessWidget {
       flex: 10,
       child: Column(
         children: [
+          FilterAddDropDown(title: "부류", enabled: true),
           FilterAddDropDown(title: "품목", enabled: true),
           FilterAddDropDown(title: "품종", enabled: true),
-          FilterAddDropDown(title: "품명", enabled: true),
         ],
       ),
     );
@@ -70,7 +70,7 @@ class _FilterSaveButton extends StatelessWidget {
     return Expanded(
       flex: 2,
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(12.0),
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 1.5,
           child: ElevatedButton(

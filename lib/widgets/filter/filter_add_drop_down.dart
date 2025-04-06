@@ -15,11 +15,16 @@ class FilterAddDropDown extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: DropdownButtonFormField<String?>(
-        style: TextStyle(fontSize: 24, color: Colors.black),
+        style: TextStyle(
+          fontSize: 16,
+          color: Colors.black,
+          fontWeight: FontWeight.w500,
+        ),
         isDense: false,
         decoration: InputDecoration(
           labelText: title,
-          labelStyle: TextStyle(fontSize: 32, color: Colors.green),
+          labelStyle: TextStyle(fontSize: 24, color: Colors.green),
+
           enabled: enabled,
         ),
         onChanged: (String? newValue) {},
