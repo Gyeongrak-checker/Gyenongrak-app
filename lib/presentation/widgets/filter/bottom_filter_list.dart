@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/widgets/filter/filter_add_button.dart';
-import 'package:gyenongrak_app/widgets/filter/filter_button.dart';
+import 'package:gyenongrak_app/presentation/widgets/filter/filter_add_button.dart';
+import 'package:gyenongrak_app/presentation/widgets/filter/filter_button.dart';
 
 class BottomFilter extends StatelessWidget {
   const BottomFilter({super.key});

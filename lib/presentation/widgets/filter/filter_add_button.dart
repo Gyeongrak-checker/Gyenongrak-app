@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/screens/filtter/add_filter_screen.dart';
+import 'package:gyenongrak_app/presentation/screens/filtter/add_filter_screen.dart';
 
 class FilterAddButton extends StatelessWidget {
   const FilterAddButton({super.key});

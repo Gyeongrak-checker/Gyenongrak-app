@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/widgets/filter/filter_add_drop_down.dart';
+import 'package:gyenongrak_app/presentation/widgets/filter/filter_add_drop_down.dart';
 
 class AddFilterScreen extends StatelessWidget {
   const AddFilterScreen({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/widgets/gyuenongrak/list_item.dart';
+import 'package:gyenongrak_app/presentation/widgets/gyuenongrak/list_item.dart';
 
 class GyuenongrakListView extends StatelessWidget {
   const GyuenongrakListView({super.key});
