@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gyenongrak_app/di/di.dart';
 import 'package:gyenongrak_app/presentation/widgets/filter/filter_add_button.dart';
 import 'package:gyenongrak_app/presentation/widgets/filter/filter_button.dart';
 
-class BottomFilter extends StatelessWidget {
+class BottomFilter extends ConsumerWidget {
   const BottomFilter({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final viewModel = ref.read(filterViewModelProvider);
+
     return SizedBox(
       height: 60.0,
       child: ListView(
