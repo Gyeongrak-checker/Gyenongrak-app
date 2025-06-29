@@ -50,7 +50,7 @@ class FilterListItem extends StatelessWidget {
 class _Item extends StatelessWidget {
   final String child;
 
-  const _Item({super.key, required this.child});
+  const _Item({required this.child});
 
   @override
   Widget build(BuildContext context) {
