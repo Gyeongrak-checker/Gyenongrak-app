@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gyenongrak_app/presentation/filter/view_model/add_view_model.dart';
 
-class FilterAddDropDown extends StatelessWidget {
+class FilterAddDropDown extends ConsumerWidget {
   final String title;
   final bool enabled;
 
@@ -11,7 +13,9 @@ class FilterAddDropDown extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final filterItem = ref.watch(addViewModelProvider);
+
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: DropdownButtonFormField<String?>(
@@ -24,7 +28,6 @@ class FilterAddDropDown extends StatelessWidget {
         decoration: InputDecoration(
           labelText: title,
           labelStyle: TextStyle(fontSize: 24, color: Colors.green),
-
           enabled: enabled,
         ),
         onChanged: (String? newValue) {},

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:gyenongrak_app/presentation/widgets/filter/filter_add_drop_down.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gyenongrak_app/presentation/filter/widget/filter_drop_down_widget.dart';
 
-class AddFilterScreen extends StatelessWidget {
+class AddFilterScreen extends ConsumerWidget {
   const AddFilterScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -37,7 +38,7 @@ class _MarketArea extends StatelessWidget {
       child: Column(
         children: [
           FilterAddDropDown(title: "도매 시장", enabled: true),
-          FilterAddDropDown(title: "법인 코드", enabled: true),
+          FilterAddDropDown(title: "법인", enabled: true),
         ],
       ),
     );
@@ -62,11 +63,10 @@ class _ProductArea extends StatelessWidget {
   }
 }
 
-class _FilterSaveButton extends StatelessWidget {
+class _FilterSaveButton extends ConsumerWidget {
   const _FilterSaveButton();
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Expanded(
       flex: 2,
       child: Padding(

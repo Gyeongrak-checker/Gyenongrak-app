@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:gyenongrak_app/presentation/screens/main_screen.dart';
+import 'package:gyenongrak_app/presentation/filter/view/home.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      home: Material(child: MainScreen()),
+      home: Material(child: Home()),
     );
   }
 }
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 // ├── domain/                   # 핵심 로직 (클린 도메인 계층 역할)
 // │   ├── model/                # Entity 또는 DTO (예: AuctionItem)
 // │   ├── repository/           # 추상화된 Repository 인터페이스
-// │   └── usecase/              # 유즈케이스, 도메인 로직
+// │   └── use_case/              # 유즈케이스, 도메인 로직
 // │
 // ├── data/                     # 외부 데이터 관련
 // │   ├── repository/           # 실제 구현체 (API, 로컬 DB 등)

@@ -1,0 +1,1 @@
+enum CodeEnum { MARKET, CORP, CATEGORY, ITEM, VARIET }
