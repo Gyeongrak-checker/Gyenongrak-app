@@ -1,10 +1,10 @@
-import 'package:gyenongrak_app/data/dto/FilterCode.dart';
+import 'package:gyenongrak_app/data/dto/filter_code.dart';
 
 abstract interface class FilterCodeRepository {
-  FilterCode getMarket();
-  FilterCode getCorp(String marketCode);
+  Future<FilterCode> getMarket();
+  Future<FilterCode> getCorp(String marketCode);
 
-  FilterCode getCategory();
-  FilterCode getItem();
-  FilterCode getVariety();
+  Future<List<FilterCode>> getCategory();
+  Future<FilterCode> getItem(String categoryCode);
+  Future<FilterCode> getVariety(String itemCode);
 }

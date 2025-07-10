@@ -1,8 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:gyenongrak_app/data/repository/filter_code_repository_impl.dart';
+import 'package:gyenongrak_app/domain/repository/filter_code_repository.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'at_api.g.dart';
+part 'di.g.dart';
 
 @riverpod
 Dio dio(Ref ref) {
@@ -16,4 +18,10 @@ Dio dio(Ref ref) {
   );
 
   return dio;
+}
+
+@riverpod
+FilterCodeRepository filterCodeRepository(Ref ref) {
+  final dio = ref.watch(dioProvider);
+  return FilterCodeRepositoryImpl(dio);
 }
